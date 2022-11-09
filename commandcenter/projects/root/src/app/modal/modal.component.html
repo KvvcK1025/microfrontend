@@ -1,0 +1,28 @@
+<h2 mat-dialog-title> Edit Widget</h2>
+<mat-dialog-content>
+    <mat-form-field appearance="outline">
+        <mat-label>Widget Name</mat-label>
+        <input matInput >
+       
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field> &nbsp;
+      <mat-form-field appearance="outline">
+        <mat-label>X Axis Label</mat-label>
+        <input matInput [(ngModel)]="data.xLabel">
+        
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Y Axis Label</mat-label>
+        <input matInput [(ngModel)]="data.yLabel">
+        
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+     
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>Save</button>
+    <button mat-raised-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

@@ -1,0 +1,86 @@
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c73d2;
+    background: linear-gradient(-66deg, rgba(44, 115, 210, 1) 0%, rgba(5, 25, 55, 1) 100%);
+    position: relative;
+}
+.login .wrapper {
+    min-width: 420px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 25px 20px;
+    position: relative;
+    z-index: 2;
+}
+.login .wrapper .logo {
+    background-image: url("../../assets/Infosyslogo1.svg");
+    width: 85px;
+    height: 36px;
+    transform: translateX(-4px);
+    background-repeat: no-repeat;
+}
+.login .wrapper h4 {
+    font-size: 18px;
+    color: #007dc3;
+}
+.login .wrapper h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    margin-top: 30px;
+    color: #333;
+}
+.login .wrapper p {
+    margin-bottom: 8px;
+}
+.login .wrapper .p-inputgroup input[type=text], .login .wrapper .p-inputgroup input[type=password] {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    background-color: #e9ecef !important;
+}
+.login .wrapper label {
+    font-size: 14px;
+}
+.login .wrapper .grid .col-12 {
+    margin-bottom: 7px;
+}
+.login .wrapper a {
+    font-size: 14px;
+    color: #007dc3;
+}
+.login .wrapper .btn-primary {
+    margin: 12px 0;
+    width: 100%;
+    background-color: #007dc3;
+    font-size: 14px;
+}
+.login .wrapper span {
+    font-size: 14px;
+}
+.login .copyright {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #4983d1;
+    margin: 0;
+}
+.login:before {
+    content: '';
+    background-image: url("../../assets/bg.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0.1;
+}

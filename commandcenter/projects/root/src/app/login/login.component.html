@@ -1,0 +1,63 @@
+
+  <!-- <div class="centre">
+    <form>
+      <div class="container"> 
+          <label>Username : </label> 
+          <input type="text" placeholder="Enter Username" [(ngModel)]="username" name="username" required> <br/><br/>
+          <label>Password : </label> 
+          <input type="password" placeholder="Enter Password" [(ngModel)]="password" name="password" required> <br/><br/>  
+          <button type="submit" (click)="login()" color="primary">Login</button>
+      </div> 
+    </form>
+  </div> -->
+  <section class="login">
+    <div class="wrapper">
+        <div class="logo"></div>
+        <h4>Command Center</h4>
+
+        <h5>Login</h5>
+        <p>Welcome to <strong>Command Center</strong> portal</p>
+
+        <div class="grid p-fluid">
+            <div class="col-12 md:col-12">
+                <label for="">Username</label>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input type="text" pInputText class = "form-control" placeholder="Username"[(ngModel)]="username">         
+                </div>
+            </div>
+            <div class="col-12 md:col-4">
+                <label for="">Password</label>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                    <input type="password" pInputText  class = "form-control" placeholder="Password" [(ngModel)]="password">         
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input
+                          mdbCheckbox
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Remember Me
+                        </label>
+                      </div>
+                </div>
+                <!-- <a [routerLink]="['/forgotPassword']">Forgot Password ?</a> -->
+            </div>
+            <button type="button" class="btn btn-primary"  (click)="login()">Login</button>
+            <!-- <div class="text-center ">
+                <span class="d-block">Not a registered user ? <a [routerLink]="['/register']">Register Here</a></span>
+            </div> -->
+        </div>
+
+    </div>
+    <p class="copyright">©2020 Infosys Limited. All Rights Reserved.</p>
+</section>
+
+  

@@ -1,0 +1,49 @@
+.body {
+    width: calc(100% - 5rem);
+    height: 100vh;
+    margin-left: 5rem;
+    z-index: 0;
+    position: relative;
+    top: 0;
+    transition: all .5s ease;
+    background: #f4f7fa;
+    padding: 3rem;
+}
+
+.body-trimmed {
+    width: calc(100% - 16.5625rem);
+    margin-left: 16.5625rem;
+}
+
+.body-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+}
+
+.test{
+    background: #FFFFFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;  
+    align-items: center;
+    margin-top: -30px;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid #E0E0E0;
+    height: 40px;
+}
+.bar {
+    margin-top: -48px;
+    margin-left: -48px;
+    width: 1183px;
+}
+.spacer {
+    flex : 1 1 auto;
+}
+
+.rowone {
+    background: #ffffff;
+    height: fit-content;
+    color: #0168d9;
+}

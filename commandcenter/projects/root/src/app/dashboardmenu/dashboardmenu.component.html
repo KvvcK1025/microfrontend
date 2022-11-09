@@ -1,0 +1,261 @@
+<!-- <div class="smart-guidance" (click) = "onClick()" >
+    <section class="smart-guidance-bar">
+      <section class="bar-images">
+      </section>
+      <h4 class="bar-title" >Widgets</h4>
+    </section>
+   
+    
+  </div> -->
+ 
+    
+      
+      <ktd-grid [cols]="cols"
+              [rowHeight]="rowHeight"
+              [layout]="layout"
+              [scrollableParent]="document"
+              [compactType]="compactType"
+              (layoutUpdated)="onLayoutUpdated($event)">
+           
+              
+              <ktd-grid-item id="0" >               
+                <!-- <mat-card-header> Number of Tickets for last week </mat-card-header> -->
+                <ngx-charts-bar-vertical-stacked
+                [view]="layoutSizes['0']"
+                [scheme]="colorScheme2"
+                [results]="countriesPopulationByYear"
+                [gradient]="false"
+                [xAxis]="xAxis"
+                [yAxis]="yAxis"
+                [legend]="true"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [animations]="animations"
+                (select)="onSelect('0', $event)">
+            </ngx-charts-bar-vertical-stacked>
+            <span class="material-icons" (click)="openModal()" >edit</span>
+              </ktd-grid-item>
+           
+
+              <ktd-grid-item id="1" >
+              <ngx-charts-bar-vertical
+                [view]="layoutSizes['1']"
+                [scheme]="colorScheme2"
+                [results]="countriesPopulation"
+                [gradient]="false"
+                [xAxis]="xAxis"
+                [yAxis]="yAxis"
+                [legend]="true"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [animations]="animations"
+                (select)="onSelect('0', $event)">
+            </ngx-charts-bar-vertical>
+          </ktd-grid-item>
+
+              <ktd-grid-item id="2">
+                <ngx-charts-bar-horizontal-2d
+                    [view]="layoutSizes['2']"
+                    [scheme]="colorSchemeGradientLinear"
+                    [schemeType]="'linear'"
+                    [results]="countriesPopulationByYear"
+                    [gradient]="false"
+                    [xAxis]="xAxis"
+                    [yAxis]="yAxis"
+                    [legend]="false"
+                    [legendPosition]="'below'"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="yAxisLabel"
+                    [yAxisLabel]="xAxisLabel"
+                    (select)="onSelect('1', $event)"
+                    (activate)="onActivate('1', $event)"
+                    (deactivate)="onDeactivate('1', $event)">
+                </ngx-charts-bar-horizontal-2d>
+            </ktd-grid-item>
+
+              <ktd-grid-item id="3">
+                <ngx-charts-pie-chart
+                    [view]="layoutSizes['3']"
+                    [scheme]="colorScheme"
+                    [results]="countriesPopulation"
+                    [gradient]="false"
+                    [legend]="false"
+                    [labels]="showLabels"
+                    [doughnut]="false"
+                    (select)="onSelect('5', $event)"
+                    (activate)="onActivate('5', $event)"
+                    (deactivate)="onDeactivate('5', $event)">
+                </ngx-charts-pie-chart>
+                <!-- <app-card></app-card> -->
+               
+            </ktd-grid-item>
+
+            
+            </ktd-grid>
+
+ 
+
+    <!-- <div class="grid-container">
+      <h1 class="mat-h1">Drag & Drop Dashboard</h1> 
+      <mat-grid-list cols="4" rowHeight="170px" cdkDropList 
+      (cdkDropListDropped)="ondrop($event)"
+      
+      >
+        <mat-grid-tile *ngFor="let card of cardList"
+        [colspan]="card.cols" [rowspan]="card.rows" cdkDrag>
+          <mat-card class="dashboard-card"  [style.background-color] ="card.color">
+            <mat-card-header>
+              <mat-card-title>
+                {{card.title}}
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+              <div>Card Content Here</div>
+            </mat-card-content>
+          </mat-card>
+          <div class="w-10 delete-icon">
+            <button mat-icon-button>
+              <i class="material-icons" (click)="delete(i)">delete</i>
+            </button>
+          </div>
+          <div class="example-handle" cdkDragHandle>
+            <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+              <path d="M0 0h24v24H0z" fill="none"></path>
+            </svg>
+          </div>
+        </mat-grid-tile>
+        
+      </mat-grid-list>
+      
+    </div>
+     -->
+    <!-- <div
+    #doneList="cdkDropList"
+    [cdkDropListData]="todo"
+    class="example-list"
+    cdkDropList 
+    (cdkDropListDropped)="drop($event)"
+    >
+    <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+  </div> -->
+
+    <!-- <div class="text-center">
+     
+   
+     <div
+          class="rectangle"
+          [ngStyle]="style"
+          mwlResizable
+          [validateResize]="validate"
+          [enableGhostResize]="true"
+          [resizeSnapGrid]="{ left: 50, right: 50 }"
+          (resizeEnd)="onResizeEnd($event)"
+          
+        >  hello
+          <div
+            class="resize-handle-top"
+            mwlResizeHandle
+            [resizeEdges]="{ top: true }"
+          ></div>
+          <div
+            class="resize-handle-left"
+            mwlResizeHandle
+            [resizeEdges]="{ left: true }"
+          ></div>
+          <div
+            class="resize-handle-right"
+            mwlResizeHandle
+            [resizeEdges]="{ right: true }"
+          ></div>
+          <div
+            class="resize-handle-bottom"
+            mwlResizeHandle
+            [resizeEdges]="{ bottom: true }"
+          ></div>
+        </div>
+      </div> -->
+    
+
+  
+
+<div class="collapsible" *ngIf="showGuidance" >
+    <!-- <div
+    #doneList="cdkDropList"
+    [cdkDropListData]="done"
+    class="example-list"
+    cdkDropList 
+    (cdkDropListDropped)="drop($event)"
+    >
+    <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+  </div> -->
+
+  <div (cdkDropListDropped)="drop($event)" cdkDropList>
+  <div class="text" cdkDrag >
+    <h4>Hello</h4>
+
+    <span class="total">49</span>
+
+    <span>
+        <mat-icon color="primary">trending_up</mat-icon>
+    </span>
+
+    <span class="description">
+        98%
+    </span>
+
+    <span> of target</span>
+</div>
+
+<div class="text" cdkDrag >
+  <h4>Welcome</h4>
+
+  <span class="total">49</span>
+
+  <span>
+      <mat-icon color="primary">trending_up</mat-icon>
+  </span>
+
+  <span class="description">
+      98%
+  </span>
+
+  <span> of target</span>
+</div>
+</div>
+</div>
+
+
+
+ 
+<!-- <section cdkDropListGroup style="display: flex;">
+  <div style="display: flex;" >
+    <div class="example-container">
+      <div cdkDropList
+      #hellolist = "cdkDropList"
+      [cdkDropListData]="hello"
+      (cdkDropListDropped)="drop($event)"
+      class="example-list">
+      <div class="example-box" *ngFor="let item of hello" cdkDrag>
+        {{item}}
+      </div>
+      </div>
+    </div>      
+  </div>
+
+  <div class="collapsible" *ngIf="showGuidance">
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+</section>  -->

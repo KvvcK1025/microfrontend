@@ -1,0 +1,16 @@
+p{font-size: 14px;}
+.content-container{height: 80vh; padding: 20px 20px;}
+.title{color: #ffffff; text-decoration: none;}
+#titleicon {
+    color: #ffffff;
+}
+.maintoolbar{
+    background: #4472C4;
+}
+#sidenav1{width: 14%;}
+mat-grid-tile.mat-grid-tile {
+    padding-top: calc((7% - 0.5px) * 1 + 0px) !important;
+}
+.inner-toolbar{
+    background: #B4C7E7;
+}

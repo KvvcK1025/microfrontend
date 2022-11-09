@@ -1,0 +1,36 @@
+<div  class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+    <div class="logo-container">
+        
+        <button class="logo" > <!-- (click)="toggleCollapse()" -->
+            <div class="container1">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </button>
+        <!-- <div class="logo-text" @fadeInOut *ngIf="collapsed">Command Center</div> -->
+        <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
+            <i class="fal fa-times close-icon"></i>
+        </button>
+    </div>
+    <ul cdkDropList (cdkDropListDropped)="drop($event)"  class="sidenav-nav">
+        <li cdkDrag class="sidenav-nav-item" *ngFor="let data of navData" >
+            <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}" 
+            >
+                <i class="sidenav-link-icon" [class]="data.icon" title={{data.label}}></i>
+                <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                    {{data.label}}
+                </span>
+            </a>
+        </li>
+        <!-- <button
+        @fadeInOut *ngIf="collapsed"
+        type="button"
+        class="sidenav-nav-item sidenav-link-text btn save"
+      >
+        Edit
+      </button> -->
+    </ul>
+</div>
